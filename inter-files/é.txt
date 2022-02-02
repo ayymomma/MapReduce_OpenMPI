@@ -1,0 +1,4 @@
+< élite , 5.txt >
+< émigré , 19.txt >
+< état , 19.txt >
+< école , 19.txt >

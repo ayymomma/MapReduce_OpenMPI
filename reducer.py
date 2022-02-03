@@ -26,8 +26,8 @@ def reducer_function(rank, comm, master):
                             words_count[word][source_file] = 1
                     else:
                         words_count[word] = {source_file: 1}
-                except:
-                    print(file)
+                except Exception as err:
+                    print(file + "\t" + err)
     while True:
         try:
             with open(os.path.join(result_files_location, result_file_name), 'a') as output_file:

@@ -22,7 +22,7 @@ def mapper_function(rank, comm, master):
                             break
                         except:
                             time.sleep(0.01)
-            except:
-                print(file)
+            except Exception as err:
+                print(file + "\t" + err)
     print(f" <{rank}> finished mapping")
     comm.send("FINISHED", dest=master, tag=0)
